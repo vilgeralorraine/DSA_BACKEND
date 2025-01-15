@@ -17,7 +17,7 @@ router.post('/', async(req, res) => {
         if (error.code === 11000){
             res.status(400).json({ message: "error"});
         } else {
-            res.status(500).json({ message: "error saving form data"});
+            res.status(400).json({ message: "error saving form data"});
         }
     }
 });
