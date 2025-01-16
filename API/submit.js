@@ -13,12 +13,12 @@ router.post('/', async(req, res) => {
         res.status(200).json({ message: "form submitted successfully", data: savedEntry});
     } catch (error) {
         console.error("error saving form data: ", error);
-
-        if (error.code === 11000){
-            res.status(400).json({ message: "error"});
-        } else {
-            res.status(400).json({ message: "error saving form data"});
-        }
+        res.status(500).json({ message: "error saving form data", error: error.message});
+        // if (error.code === 11000){
+        //     res.status(400).json({ message: "error"});
+        // } else {
+        //     res.status(400).json({ message: "error saving form data"});
+        // }
     }
 });
 
