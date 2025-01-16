@@ -60,7 +60,7 @@ mongoose
 
     
 //middleware
-app.use(cors({origin: ["https://vilgeraapi.azurewebsites.net/submit", "http://localhost:3000/submit", "https://nice-grass-0f36ff000.4.azurestaticapps.net", "https://kind-smoke-0b48cd800.4.azurestaticapps.net"], methods: ["GET", "POST"]}));
+app.use(cors({origin: ["https://vilgeraapi.azurewebsites.net/submit", "http://localhost:3000/submit", "https://kind-smoke-0b48cd800.4.azurestaticapps.net/"], methods: ["GET", "POST"]}));
 app.use(express.json());
 
 //Import API FOLDER
