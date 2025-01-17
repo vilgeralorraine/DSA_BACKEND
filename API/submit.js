@@ -3,10 +3,10 @@ const router = express.Router();
 const Form = require("../Models/JournalForm");    
 
 router.post('/', async(req, res) => {
-    const { name, message } = req.body;
+    const { name, message:text } = req.body;
 
     try{
-        const formEntry = new Form({ name, message });
+        const formEntry = new Form({ name, message: text});
         const savedEntry = await formEntry.save();
 
         console.log("Saved Data: ", savedEntry);
